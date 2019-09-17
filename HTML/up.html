@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .img_index {
+            width: 90%;
+            height: 600px;
+            background: yellow;
+            margin: 0 auto;
+        }
+        span {
+            font-size: 20px;
+        }
+        input, #select {
+            font-size: 40px;
+            width: 60%;
+            height: 60px;
+            margin: 10px auto;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+        .submit_button {
+            font-size: 40px;
+            text-align: center;
+            width: 400px;
+            height: 100px;
+            line-height: 100px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin: 20px auto;
+        }
+        #select{
+
+        }
+    </style>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
+            };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <div class="img_index"></div>
+    <section>
+        <ul>
+            <li><span>容器条码：</span><input placeholder="请输入"/></li>
+            <li><span>货品条码：</span><input placeholder="请输入"/></li>
+            <li><span>库位：</span><input placeholder="请输入"/></li>
+            <li><span>上架数量：</span><input placeholder="请输入"/><span>单位/件</span></li>
+        </ul>
+        <div class="submit_button">确认上架</div>
+    </section>
+</body>
+<script>
+
+</script>
+</html>
